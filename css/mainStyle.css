@@ -1,0 +1,146 @@
+html {
+    background-color: hsl(233, 47%, 7%);
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 90vw;
+    max-width: 375px;
+    background-color: hsl(244, 38%, 16%);
+
+    border-radius: 1rem;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+
+    text-align: center;
+
+    margin: 1rem auto 1rem auto;
+    
+}
+
+#headerImage {
+    overflow: hidden;
+    width: 100%;
+    background-color: hsl(277, 64%, 61%);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#headerImage img {
+    display: block;
+    mix-blend-mode: multiply;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.highlight {
+    color: hsl(277, 64%, 61%);
+}
+
+#mainHeading {
+    padding: 0.2em 1em 0.2em 1em;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+}
+
+#mainParagraph {
+    padding: 0.2em 1em 0.2em 1em;
+    line-height: 2em;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+#mainStats h1 {
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+}
+
+#mainStats p {
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.5rem;
+}
+
+li > h1, p {
+    margin: 2px;
+}
+
+.attribution {
+    padding: 0.5rem;
+    font-size: 11px;
+    text-align: center;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1440px ) {
+    html {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    body {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);/*IE9 syntax*/
+        transform: translate(-50%, -50%);/*Standard syntax*/
+
+        flex-direction: row-reverse;
+        max-width: none;
+        max-width: 1440px;
+
+    }
+
+    #headerImage {
+    border-top-left-radius: 0;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 1rem;
+
+    flex-grow: 1;
+
+    width: auto;
+    height: 100%;
+    }
+
+    #mainContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        flex-grow: 1;
+
+        width: 50%;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #mainContent > * {
+        margin: 2% 10% 2% 10%;
+    }
+}
